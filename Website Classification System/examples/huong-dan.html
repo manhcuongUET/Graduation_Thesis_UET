@@ -9,17 +9,17 @@
     />
     <meta
       name="description"
-      content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5"
+      content="Website Classification System &amp; Dashboard"
     />
-    <meta name="author" content="AdminKit" />
+    <meta name="author" content="Manfred" />
     <meta
       name="keywords"
-      content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web"
+      content="Manfred, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, web"
     />
 
     <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
-    <title>Tables | AdminKit Demo</title>
+    <title>Hướng Dẫn | Demo</title>
 
     <link href="css/app.css" rel="stylesheet" />
   </head>
@@ -61,18 +61,22 @@
                 <span class="align-middle">Tác Giả</span>
               </a>
             </li>
-
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="thong-tin.html">
-                <i class="align-middle" data-feather="file"></i>
-                <span class="align-middle">Thông Tin Thêm</span>
+            <li class="sidebar-item active">
+              <a class="sidebar-link" href="huong-dan.html">
+                <i class="align-middle" data-feather="list"></i>
+                <span class="align-middle">Hướng Dẫn</span>
               </a>
             </li>
-
             <li class="sidebar-item">
               <a class="sidebar-link" href="profile.html">
                 <i class="align-middle" data-feather="file-text"></i>
                 <span class="align-middle">Profile</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="thong-tin.html">
+                <i class="align-middle" data-feather="file"></i>
+                <span class="align-middle">Thông Tin Thêm</span>
               </a>
             </li>
 
@@ -96,7 +100,7 @@
                 </li>
               </ul>
             </li>
-            
+
             <li class="sidebar-item">
               <a
                 data-target="#ui"
@@ -115,12 +119,6 @@
                   <a class="sidebar-link" href="ui-general.html">General</a>
                 </li>
               </ul>
-            </li>
-            <li class="sidebar-item active">
-              <a class="sidebar-link" href="tables-bootstrap.html">
-                <i class="align-middle" data-feather="list"></i>
-                <span class="align-middle">Tables</span>
-              </a>
             </li>
 
             <li class="sidebar-item">
@@ -349,9 +347,9 @@
                 >
                   <img
                     src="img/avatars/20200729_175352.jpg "
-                    class="avatar img-fluid rounded mr-1 "
+                    class="avatar img-fluid rounded mr-1"
                     alt="Manh Cuong"
-                    style="object-fit:cover"
+                    style="object-fit: cover"
                   />
                   <span class="text-dark">Manh Cuong</span>
                 </a>
@@ -370,18 +368,14 @@
                     Giả</a
                   >
                   <a class="dropdown-item" href="profile.html"
-                    ><i
-                      class="align-middle mr-1"
-                      data-feather="file-text"
-                    ></i>
+                    ><i class="align-middle mr-1" data-feather="file-text"></i>
                     Profile
                   </a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">
-                    <i
-                      class="align-middle mr-1"
-                      data-feather="power"
-                    ></i>Log out</a>
+                    <i class="align-middle mr-1" data-feather="power"></i>Log
+                    out</a
+                  >
                 </div>
               </li>
             </ul>
@@ -390,9 +384,169 @@
 
         <main class="content">
           <div class="container-fluid p-0">
-            <h1 class="h3 mb-3">Tables</h1>
-
+            <h1 class="h3 mb-3">Hướng dẫn</h1>
             <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body m-sm-3 m-md-5">
+                    <!-- <div class="row">
+                      <div class="col-md-6"></div>
+                      <div class="col-md-6 text-md-right">
+                        <div class="text-muted">
+                          Update: 01/05/2021-16:10 GMT+7
+                        </div>
+                        <div class="">
+                          <a
+                          href="https://github.com/manhcuonguet"
+                          target="_blank"
+                        >
+                          <i class="align-middle" data-feather="download"></i>
+                          <strong
+                            >Dowload PDF:
+
+                            </a>
+                          </strong>
+                        </div>
+                      </div>
+                    </div> -->
+                    <div class="mb-4">
+                      <div class="text-left">
+                        <p class="text-sm">
+                          <strong>Lưu ý:</strong> Hướng dẫn dưới đây chỉ trình
+                          bày tóm tắt cách khởi động hệ thống.
+                        </p>
+                      </div>
+                      <strong><h4>Tóm tắt hệ thống</h4> </strong> <br />
+                      <div style="text-indent: 30px">
+                        Hệ thống sử dụng Raspberry Pi 4 kết hợp với camera(pi
+                        v2.1) làm trung tâm điều khiển kết nối với Arduino Uno.
+                        Website này được xây dựng để có thể sử dụng làm bảng
+                        điều khiển, giám sát hệ thống trên máy tính hoặc thiết
+                        bị di động.
+                        <div class="mb-3"></div>
+                      </div>
+                      <div style="text-indent: 30px">
+                        Từ trang
+                        <strong>
+                          <a href="index.html" target="_blank">
+                            Bảng Điều Khiển
+                          </a>
+                        </strong>
+                        Raspberry Pi có thể nhận lệnh điều khiển của người dùng
+                        để khởi động/dừng hệ thống để gửi yêu cầu(request HTTP)
+                        tới Raspberry Pi. Sau khi nhận được lệnh điều khiển,
+                        Raspberry Pi giao tiếp với Arduino Uno thông qua serial.
+                        Raspberry Pi là một máy tính nhúng, nó sẽ truyền hình
+                        ảnh từ camera tới trình duyệt web. Nó cũng chạy một mạng
+                        phân loại CNN (sử dụng tensorflow lite) để phân loại.
+                        Mạng phân loại chỉ được chạy khi Raspberry Pi nhận được
+                        lệnh từ Arduino Uno (khi hộp được phát hiện bởi cảm biến
+                        IR đầu tiên).
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <img src="./img/photos/image-system.jpg" width="50%" />
+                    </div>
+
+                    <hr class="my-4" />
+                    <div class="row mb-4">
+                      <strong><h4>Khởi động hệ thống</h4> </strong> <br />
+                      <div style="text-indent: 30px">
+                        Kết nối với Raspberry Pi 4 qua cổng display HDMI hoặc
+                        qua SSH. Đề tài này kết nối với Raspberry qua SSH sử
+                        dụng VNC (chia sẻ giao diện màn hình) để kết nối Rasp Pi
+                        với Laptop.
+                      </div>
+                      <div style="text-indent: 30px">
+                        Sử dụng cổng Ethernet trên Raspberry PI để kết nối với
+                        Laptop, sau đó Ping kiểm tra IP của Raspberry Pi từ
+                        Command Prompt (Windows):
+                        <pre>
+
+                          <code> ping raspberrypi.mshome.net </code>
+                        </pre>
+                      </div>
+                      <div class="text-center my-4">
+                        <img
+                          src="./img/photos/ping-raspberrypi.PNG"
+                          width="50%"
+                        />
+                      </div>
+                      <div class="text-left">
+                        <p class="text-sm">
+                          <strong>Lưu ý:</strong> Cần phải bật VNC trong
+                          Raspberry Pi trước.
+                        </p>
+                      </div>
+                      <div style="text-indent: 30px">
+                        Sau đó:
+                        <br />
+                      </div>
+                      <div style="text-indent: 30px">
+                        Trên terminal Raspberry Pi truy cập đến thư mục chứa
+                        Project. Trên giao diện dòng lệnh:
+                        <pre>
+                          <code>
+                           python3 app.py -p /dev/ttyACM0 -s 0
+                          </code>
+                        </pre>
+                        <div class="text-left">
+                          Trong đó:
+                          <li>
+                            "-p /dev/ttyACM0" là device_name của Arduino Uno khi
+                            kết nối tới Rasp
+                          </li>
+                          <li>
+                            -s 0 thực hiện reset folder (chứa ảnh được camera
+                            chụp của vật thể để phân loại)
+                          </li>
+                        </div>
+                        <br />
+                      </div>
+                      <div>
+                        Sau khi khởi động hệ thống, Raspberry sẽ truyền hình ảnh
+                        và kết quả phân loại tới website thông qua
+                        <strong>
+                          <a href="index.html"> Bảng Điều Khiển </a> </strong
+                        ><br />
+                        Trên cổng 5000(http://Pi_IP_Address:5000)
+                      </div>
+                    </div>
+                    <hr class="my-4" />
+                    <div class="row mb-4">
+                      <strong></strong>
+                      <div style="text-indent: 30px">
+                        Mục đích của khoá luận này là xây dựng một hệ thống có
+                        thể phân loại hoa quả. Do thời gian hạn chế trong thời
+                        gian thực hiện, khoá luận trước hết xây dựng mô hình xử
+                        lý ảnh kết hợp với máy tính nhúng để phân loại. Bên cạnh
+                        đó hình ảnh của đối tượng cần xử lý sẽ được giám sát
+                        trực tiếp trên màn hình hiển thị cùng số lượng sản phẩm
+                        đã qua.
+
+                        <br />
+                      </div>
+                    </div>
+
+                    <div class="text-center">
+                      <p class="text-sm">
+                        <strong>Lưu ý:</strong> Phía trên là tóm tắt hướng dẫn
+                        hoạt động xem thêm tại:
+                      </p>
+
+                      <a
+                        href="https://github.com/manhcuongUET/Graduation_Thesis_UET"
+                        target="_blank"
+                        class="btn btn-primary"
+                      >
+                        More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row">
               <div class="col-12 col-xl-6">
                 <div class="card">
                   <div class="card-header">
@@ -980,7 +1134,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </main>
 
@@ -1012,7 +1166,9 @@
                     <a class="text-muted" href="gioi-thieu.html">Giới thiệu</a>
                   </div>
                   <div class="list-inline-item">
-                    <a class="text-muted" href="tac-gia.html">Tác giả sản phẩm</a>
+                    <a class="text-muted" href="tac-gia.html"
+                      >Tác giả sản phẩm</a
+                    >
                   </div>
                   <div class="list-inline-item">
                     <a class="text-muted" href="profile.html">Profile</a>
