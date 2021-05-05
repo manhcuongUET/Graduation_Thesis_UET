@@ -15,8 +15,8 @@ Sorting system by Tensorflow
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://manhcuonguet.github.io/Graduation_Thesis_UET/Website%20Classification%20System/examples/index.html)
 
 ## Tính năng
-*Điều khiển, giám sát băng tải qua website.
-*Hướng dẫn đào tạo mô hình xử lý ảnh dựa trên mạng CNN(vgg16).
+* Điều khiển, giám sát băng tải qua website.
+* Hướng dẫn đào tạo mô hình xử lý ảnh dựa trên mạng CNN(vgg16).
 
 ###  Tải xuống
 
