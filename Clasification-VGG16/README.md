@@ -1,4 +1,4 @@
-# LogoClassification
+# Classification 
 Dự án này chỉ ra cách đào tạo và dự đoán 3 lớp logo với keras và tensorflow lite
 
 ## Dependencies
