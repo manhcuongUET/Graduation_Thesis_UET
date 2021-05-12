@@ -2,9 +2,8 @@
 
 ## Demonstration
 
-[![Product Sorting System with Tensorflow Lite, Raspberry Pi and Arduino Demo
-]
+
 
 ## Description
 
-
+Hệ thống phân loại sản phẩm (Tensorflow Lite, Raspberry Pi and Arduino Uno)

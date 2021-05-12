@@ -1,5 +1,5 @@
 # Graduation_Thesis
-Sorting system by Tensorflow
+Hệ thống phân loại ứng dụng xử lý ảnh trên mạng CNN (VGG16)
 
 # Các Thành Phần Chính:
 

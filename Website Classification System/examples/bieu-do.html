@@ -19,7 +19,7 @@
 
     <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
-    <title>Biểu đồ |Demo</title>
+    <title>Đồ Thị |Demo</title>
 
     <link href="css/app.css" rel="stylesheet" />
   </head>
@@ -61,7 +61,7 @@
                 <span class="align-middle">Tác Giả</span>
               </a>
             </li>
-            <li class="sidebar-item ">
+            <li class="sidebar-item">
               <a class="sidebar-link" href="huong-dan.html">
                 <i class="align-middle" data-feather="list"></i>
                 <span class="align-middle">Hướng Dẫn</span>
@@ -122,9 +122,9 @@
             </li>
 
             <li class="sidebar-item active">
-              <a class="sidebar-link" href="charts-chartjs.html">
+              <a class="sidebar-link" href="bieu-do.html">
                 <i class="align-middle" data-feather="bar-chart-2"></i>
-                <span class="align-middle">Charts</span>
+                <span class="align-middle">Đồ Thị</span>
               </a>
             </li>
           </ul>
@@ -166,7 +166,10 @@
                   </div>
                 </a>
                 <div
-                  class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0"
+                  class="
+                    dropdown-menu dropdown-menu-lg dropdown-menu-right
+                    py-0
+                  "
                   aria-labelledby="alertsDropdown"
                 >
                   <div class="dropdown-menu-header">4 New Notifications</div>
@@ -245,7 +248,10 @@
                   </div>
                 </a>
                 <div
-                  class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0"
+                  class="
+                    dropdown-menu dropdown-menu-lg dropdown-menu-right
+                    py-0
+                  "
                   aria-labelledby="messagesDropdown"
                 >
                   <div class="dropdown-menu-header">
@@ -384,20 +390,39 @@
 
         <main class="content">
           <div class="container-fluid p-0">
-            <h1 class="h3 mb-3">Chart.js</h1>
+            <h1 class="h3 mb-3">Đồ thị</h1>
 
             <div class="row">
               <div class="col-12 col-lg-6">
                 <div class="card flex-fill w-100">
                   <div class="card-header">
-                    <h5 class="card-title">Line Chart</h5>
+                    <h5 class="card-title">
+                      Training and validation accuracy Line Chart
+                    </h5>
                     <h6 class="card-subtitle text-muted">
                       A line chart is a way of plotting data points on a line.
                     </h6>
                   </div>
                   <div class="card-body">
                     <div class="chart">
-                      <canvas id="chartjs-line"></canvas>
+                      <canvas id="chartjs-line-accuracy"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="card flex-fill w-100">
+                  <div class="card-header">
+                    <h5 class="card-title">
+                      Training and validation accuracy Line Chart
+                    </h5>
+                    <h6 class="card-subtitle text-muted">
+                      A line chart is a way of plotting data points on a line.
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart">
+                      <canvas id="chartjs-line-loss"></canvas>
                     </div>
                   </div>
                 </div>
@@ -406,7 +431,7 @@
               <div class="col-12 col-lg-6">
                 <div class="card">
                   <div class="card-header">
-                    <h5 class="card-title">Bar Chart</h5>
+                    <h5 class="card-title">Dataset fruit Bar Chart</h5>
                     <h6 class="card-subtitle text-muted">
                       A bar chart provides a way of showing data values
                       represented as vertical bars.
@@ -414,7 +439,7 @@
                   </div>
                   <div class="card-body">
                     <div class="chart">
-                      <canvas id="chartjs-bar"></canvas>
+                      <canvas id="chartjs-bar-dataset"></canvas>
                     </div>
                   </div>
                 </div>
@@ -432,57 +457,6 @@
                   <div class="card-body">
                     <div class="chart chart-sm">
                       <canvas id="chartjs-doughnut"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-lg-6">
-                <div class="card">
-                  <div class="card-header">
-                    <h5 class="card-title">Pie Chart</h5>
-                    <h6 class="card-subtitle text-muted">
-                      Pie charts are excellent at showing the relational
-                      proportions between data.
-                    </h6>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart chart-sm">
-                      <canvas id="chartjs-pie"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-lg-6">
-                <div class="card">
-                  <div class="card-header">
-                    <h5 class="card-title">Radar Chart</h5>
-                    <h6 class="card-subtitle text-muted">
-                      A radar chart is a way of showing multiple data points and
-                      the variation between them.
-                    </h6>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart">
-                      <canvas id="chartjs-radar"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-lg-6">
-                <div class="card">
-                  <div class="card-header">
-                    <h5 class="card-title">Polar Area Chart</h5>
-                    <h6 class="card-subtitle text-muted">
-                      Polar area charts are similar to pie charts, but each
-                      segment has the same angle.
-                    </h6>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart">
-                      <canvas id="chartjs-polar-area"></canvas>
                     </div>
                   </div>
                 </div>
@@ -543,43 +517,17 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Line chart
-        new Chart(document.getElementById("chartjs-line"), {
+        new Chart(document.getElementById("chartjs-line-accuracy"), {
           type: "line",
           data: {
-            labels: [
-              "Jan",
-              "Feb",
-              "Mar",
-              "Apr",
-              "May",
-              "Jun",
-              "Jul",
-              "Aug",
-              "Sep",
-              "Oct",
-              "Nov",
-              "Dec",
-            ],
+            labels: ["", "2", "4", "6", "8", "10"],
             datasets: [
               {
                 label: "Sales ($)",
                 fill: true,
                 backgroundColor: "transparent",
                 borderColor: window.theme.primary,
-                data: [
-                  2115,
-                  1562,
-                  1584,
-                  1892,
-                  1487,
-                  2223,
-                  2966,
-                  2448,
-                  2905,
-                  3838,
-                  2917,
-                  3327,
-                ],
+                data: [0.96, 0.97, 1584, 1892, 1487, 2223],
               },
               {
                 label: "Orders",
@@ -587,20 +535,7 @@
                 backgroundColor: "transparent",
                 borderColor: "#adb5bd",
                 borderDash: [4, 4],
-                data: [
-                  958,
-                  724,
-                  629,
-                  883,
-                  915,
-                  1214,
-                  1476,
-                  1212,
-                  1554,
-                  2128,
-                  1466,
-                  1827,
-                ],
+                data: [958, 724, 629, 883, 915, 1214],
               },
             ],
           },
@@ -650,41 +585,28 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Bar chart
-        new Chart(document.getElementById("chartjs-bar"), {
+        new Chart(document.getElementById("chartjs-bar-dataset"), {
           type: "bar",
           data: {
-            labels: [
-              "Jan",
-              "Feb",
-              "Mar",
-              "Apr",
-              "May",
-              "Jun",
-              "Jul",
-              "Aug",
-              "Sep",
-              "Oct",
-              "Nov",
-              "Dec",
-            ],
+            labels: ["Chín", "Hỏng", "Xanh"],
             datasets: [
               {
-                label: "Last year",
+                label: "Data Train",
                 backgroundColor: window.theme.primary,
                 borderColor: window.theme.primary,
                 hoverBackgroundColor: window.theme.primary,
                 hoverBorderColor: window.theme.primary,
-                data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+                data: [54, 67, 41],
                 barPercentage: 0.75,
                 categoryPercentage: 0.5,
               },
               {
-                label: "This year",
+                label: "Data validation",
                 backgroundColor: "#dee2e6",
                 borderColor: "#dee2e6",
                 hoverBackgroundColor: "#dee2e6",
                 hoverBorderColor: "#dee2e6",
-                data: [69, 66, 24, 48, 52, 51, 44, 53, 62, 79, 51, 68],
+                data: [69, 66, 24],
                 barPercentage: 0.75,
                 categoryPercentage: 0.5,
               },
@@ -746,98 +668,6 @@
             legend: {
               display: false,
             },
-          },
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Pie chart
-        new Chart(document.getElementById("chartjs-pie"), {
-          type: "pie",
-          data: {
-            labels: ["Social", "Search Engines", "Direct", "Other"],
-            datasets: [
-              {
-                data: [260, 125, 54, 146],
-                backgroundColor: [
-                  window.theme.primary,
-                  window.theme.warning,
-                  window.theme.danger,
-                  "#dee2e6",
-                ],
-                borderColor: "transparent",
-              },
-            ],
-          },
-          options: {
-            maintainAspectRatio: false,
-            legend: {
-              display: false,
-            },
-          },
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Radar chart
-        new Chart(document.getElementById("chartjs-radar"), {
-          type: "radar",
-          data: {
-            labels: ["Speed", "Reliability", "Comfort", "Safety", "Efficiency"],
-            datasets: [
-              {
-                label: "Model X",
-                backgroundColor: "rgba(0, 123, 255, 0.2)",
-                borderColor: window.theme.primary,
-                pointBackgroundColor: window.theme.primary,
-                pointBorderColor: "#fff",
-                pointHoverBackgroundColor: "#fff",
-                pointHoverBorderColor: window.theme.primary,
-                data: [70, 53, 82, 60, 33],
-              },
-              {
-                label: "Model S",
-                backgroundColor: "rgba(220, 53, 69, 0.2)",
-                borderColor: window.theme.danger,
-                pointBackgroundColor: window.theme.danger,
-                pointBorderColor: "#fff",
-                pointHoverBackgroundColor: "#fff",
-                pointHoverBorderColor: window.theme.danger,
-                data: [35, 38, 65, 85, 84],
-              },
-            ],
-          },
-          options: {
-            maintainAspectRatio: false,
-          },
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Polar Area chart
-        new Chart(document.getElementById("chartjs-polar-area"), {
-          type: "polarArea",
-          data: {
-            labels: ["Speed", "Reliability", "Comfort", "Safety", "Efficiency"],
-            datasets: [
-              {
-                label: "Model S",
-                data: [35, 38, 65, 70, 24],
-                backgroundColor: [
-                  window.theme.primary,
-                  window.theme.success,
-                  window.theme.danger,
-                  window.theme.warning,
-                  window.theme.info,
-                ],
-              },
-            ],
-          },
-          options: {
-            maintainAspectRatio: false,
           },
         });
       });
