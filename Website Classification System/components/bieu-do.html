@@ -19,7 +19,7 @@
 
     <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
-    <title>Profile Page | Demo</title>
+    <title>Đồ Thị |Demo</title>
 
     <link href="css/app.css" rel="stylesheet" />
   </head>
@@ -67,7 +67,7 @@
                 <span class="align-middle">Hướng Dẫn</span>
               </a>
             </li>
-            <li class="sidebar-item active">
+            <li class="sidebar-item">
               <a class="sidebar-link" href="profile.html">
                 <i class="align-middle" data-feather="file-text"></i>
                 <span class="align-middle">Profile</span>
@@ -121,7 +121,7 @@
               </ul>
             </li>
 
-            <li class="sidebar-item">
+            <li class="sidebar-item active">
               <a class="sidebar-link" href="bieu-do.html">
                 <i class="align-middle" data-feather="bar-chart-2"></i>
                 <span class="align-middle">Đồ Thị</span>
@@ -390,262 +390,74 @@
 
         <main class="content">
           <div class="container-fluid p-0">
-            <h1 class="h3 mb-3">Profile</h1>
+            <h1 class="h3 mb-3">Đồ thị</h1>
 
             <div class="row">
-              <div class="col-md-4 col-xl-3">
-                <div class="card mb-3">
+              <div class="col-12 col-lg-6">
+                <div class="card flex-fill w-100">
                   <div class="card-header">
-                    <h5 class="card-title mb-0">Thông tin</h5>
+                    <h5 class="card-title">
+                      Training and validation accuracy Line Chart
+                    </h5>
+                    <h6 class="card-subtitle text-muted">
+                      A line chart is a way of plotting data points on a line.
+                    </h6>
                   </div>
-                  <div class="card-body text-center">
-                    <img
-                      src="./img/avatars/20200729_175352.jpg"
-                      alt="Doan Manh Cuong"
-                      class="img-fluid mb-2"
-                      width="128"
-                      height="128"
-                    />
-                    <h5 class="card-title mb-0">Đoàn Mạnh Cường</h5>
-                    <div class="text-muted mb-2">Developer</div>
-
-                    <div>
-                      <a class="btn btn-primary btn-sm" href="#">Follow</a>
-                      <a class="btn btn-primary btn-sm" href="#"
-                        ><span data-feather="message-square"></span> Message</a
-                      >
+                  <div class="card-body">
+                    <div class="chart">
+                      <canvas id="chartjs-line-accuracy"></canvas>
                     </div>
                   </div>
-                  <hr class="my-0" />
-                  <div class="card-body">
-                    <h5 class="h6 card-title">Kỹ năng</h5>
-                    <a href="#" class="badge bg-primary mr-1 my-1">ReactJs</a>
-                    <a href="#" class="badge bg-primary mr-1 my-1"
-                      >JavaScript</a
-                    >
-                    <a href="#" class="badge bg-primary mr-1 my-1">HTML</a>
-                    <a href="#" class="badge bg-primary mr-1 my-1">Sass</a>
-                    <a href="#" class="badge bg-primary mr-1 my-1">Git</a>
-                    <a href="#" class="badge bg-primary mr-1 my-1">UI</a>
-                    <a href="#" class="badge bg-primary mr-1 my-1">UX</a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="card flex-fill w-100">
+                  <div class="card-header">
+                    <h5 class="card-title">
+                      Training and validation accuracy Line Chart
+                    </h5>
+                    <h6 class="card-subtitle text-muted">
+                      A line chart is a way of plotting data points on a line.
+                    </h6>
                   </div>
-                  <hr class="my-0" />
                   <div class="card-body">
-                    <h5 class="h6 card-title">About</h5>
-                    <ul class="list-unstyled mb-0">
-                      <li class="mb-1">
-                        <span
-                          data-feather="home"
-                          class="feather-sm mr-1"
-                        ></span>
-                        Lives in <a href="#">Cầu Giấy, Hà Nội</a>
-                      </li>
-
-                      <li class="mb-1">
-                        <span
-                          data-feather="briefcase"
-                          class="feather-sm mr-1"
-                        ></span>
-                        Profile at
-                        <a
-                          href="https://github.com/manhcuonguet"
-                          target="_blank"
-                          >GitHub</a
-                        >
-                      </li>
-                      <li class="mb-1">
-                        <span
-                          data-feather="map-pin"
-                          class="feather-sm mr-1"
-                        ></span>
-                        From <a href="#">Quảng Ninh</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <hr class="my-0" />
-                  <div class="card-body">
-                    <h5 class="h6 card-title">Elsewhere</h5>
-                    <ul class="list-unstyled mb-0">
-                      <li class="mb-1">
-                        <span class="fas fa-globe fa-fw mr-1"></span>
-                        <a href="#">staciehall.co</a>
-                      </li>
-                      <li class="mb-1">
-                        <span class="fab fa-facebook fa-fw mr-1"></span>
-                        <a
-                          href="https://www.facebook.com/UET.Manfred"
-                          target="_blank"
-                          >Facebook</a
-                        >
-                      </li>
-                      <li class="mb-1">
-                        <span class="fab fa-twitter fa-fw mr-1"></span>
-                        <a
-                          href="https://twitter.com/dmc_Manfred"
-                          target="_blank"
-                          >Twitter</a
-                        >
-                      </li>
-                      <li class="mb-1">
-                        <span class="fab fa-linkedin fa-fw mr-1"></span>
-                        <a href="#">LinkedIn</a>
-                      </li>
-                    </ul>
+                    <div class="chart">
+                      <canvas id="chartjs-line-loss"></canvas>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="col-md-8 col-xl-9">
+              <div class="col-12 col-lg-6">
                 <div class="card">
                   <div class="card-header">
-                    <h5 class="card-title mb-0">Activities</h5>
+                    <h5 class="card-title">Dataset fruit Bar Chart</h5>
+                    <h6 class="card-subtitle text-muted">
+                      A bar chart provides a way of showing data values
+                      represented as vertical bars.
+                    </h6>
                   </div>
-                  <div class="card-body h-100">
-                    <div class="d-flex align-items-start">
-                      <img
-                        src="img/avatars/avatar-5.jpg"
-                        width="36"
-                        height="36"
-                        class="rounded-circle mr-2"
-                        alt="Vanessa Tucker"
-                      />
-                      <div class="flex-grow-1">
-                        <small class="float-right text-navy">5m ago</small>
-                        <strong>Vanessa Tucker</strong> started following
-                        <strong>Christina Mason</strong><br />
-                        <small class="text-muted">Today 7:51 pm</small><br />
-                      </div>
+                  <div class="card-body">
+                    <div class="chart">
+                      <canvas id="chartjs-bar-dataset"></canvas>
                     </div>
+                  </div>
+                </div>
+              </div>
 
-                    <hr />
-                    <div class="d-flex align-items-start">
-                      <img
-                        src="img/avatars/avatar.jpg"
-                        width="36"
-                        height="36"
-                        class="rounded-circle mr-2"
-                        alt="Charles Hall"
-                      />
-                      <div class="flex-grow-1">
-                        <small class="float-right text-navy">30m ago</small>
-                        <strong>Charles Hall</strong> posted something on
-                        <strong>Christina Mason</strong>'s timeline<br />
-                        <small class="text-muted">Today 7:21 pm</small>
-
-                        <div class="border text-sm text-muted p-2 mt-1">
-                          Etiam rhoncus. Maecenas tempus, tellus eget
-                          condimentum rhoncus, sem quam semper libero, sit amet
-                          adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-                          vel, luctus pulvinar, hendrerit id, lorem. Maecenas
-                          nec odio et ante tincidunt tempus. Donec vitae sapien
-                          ut libero venenatis faucibus. Nullam quis ante.
-                        </div>
-
-                        <a href="#" class="btn btn-sm btn-danger mt-1"
-                          ><i class="feather-sm" data-feather="heart"></i>
-                          Like</a
-                        >
-                      </div>
+              <div class="col-12 col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Doughnut Chart</h5>
+                    <h6 class="card-subtitle text-muted">
+                      Doughnut charts are excellent at showing the relational
+                      proportions between data.
+                    </h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart chart-sm">
+                      <canvas id="chartjs-doughnut"></canvas>
                     </div>
-
-                    <hr />
-                    <div class="d-flex align-items-start">
-                      <img
-                        src="img/avatars/avatar-4.jpg"
-                        width="36"
-                        height="36"
-                        class="rounded-circle mr-2"
-                        alt="Christina Mason"
-                      />
-                      <div class="flex-grow-1">
-                        <small class="float-right text-navy">1h ago</small>
-                        <strong>Christina Mason</strong> posted a new blog<br />
-
-                        <small class="text-muted">Today 6:35 pm</small>
-                      </div>
-                    </div>
-
-                    <hr />
-                    <div class="d-flex align-items-start">
-                      <img
-                        src="img/avatars/avatar-2.jpg"
-                        width="36"
-                        height="36"
-                        class="rounded-circle mr-2"
-                        alt="William Harris"
-                      />
-                      <div class="flex-grow-1">
-                        <small class="float-right text-navy">3h ago</small>
-                        <strong>William Harris</strong> posted two photos on
-                        <strong>Christina Mason</strong>'s timeline<br />
-                        <small class="text-muted">Today 5:12 pm</small>
-
-                        <div class="row g-0 mt-1">
-                          <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                            <img
-                              src="img/photos/unsplash-1.jpg"
-                              class="img-fluid pr-2"
-                              alt="Unsplash"
-                            />
-                          </div>
-                          <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                            <img
-                              src="img/photos/unsplash-2.jpg"
-                              class="img-fluid pr-2"
-                              alt="Unsplash"
-                            />
-                          </div>
-                        </div>
-
-                        <a href="#" class="btn btn-sm btn-danger mt-1"
-                          ><i class="feather-sm" data-feather="heart"></i>
-                          Like</a
-                        >
-                      </div>
-                    </div>
-
-                    <hr />
-                    <div class="d-flex align-items-start">
-                      <img
-                        src="img/avatars/avatar-2.jpg"
-                        width="36"
-                        height="36"
-                        class="rounded-circle mr-2"
-                        alt="William Harris"
-                      />
-                      <div class="flex-grow-1">
-                        <small class="float-right text-navy">1d ago</small>
-                        <strong>William Harris</strong> started following
-                        <strong>Christina Mason</strong><br />
-                        <small class="text-muted">Yesterday 3:12 pm</small>
-
-                        <div class="d-flex align-items-start mt-1">
-                          <a class="pr-3" href="#">
-                            <img
-                              src="img/avatars/avatar-4.jpg"
-                              width="36"
-                              height="36"
-                              class="rounded-circle mr-2"
-                              alt="Christina Mason"
-                            />
-                          </a>
-                          <div class="flex-grow-1">
-                            <div class="border text-sm text-muted p-2 mt-1">
-                              Nam quam nunc, blandit vel, luctus pulvinar,
-                              hendrerit id, lorem. Maecenas nec odio et ante
-                              tincidunt tempus.
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <hr />
-
-
-
-                    <hr />
-                    <a href="#" class="btn btn-primary btn-block">Load more</a>
                   </div>
                 </div>
               </div>
@@ -664,7 +476,7 @@
                     >
                   </div>
                   <img
-                    src="../examples/img/photos/log_DHCN.jpg"
+                    src="./img/photos/log_DHCN.jpg"
                     alt="log_DHCN"
                     width="135px"
                     height="120"
@@ -701,5 +513,164 @@
     </div>
 
     <script src="js/app.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Line chart
+        new Chart(document.getElementById("chartjs-line-accuracy"), {
+          type: "line",
+          data: {
+            labels: ["", "2", "4", "6", "8", "10"],
+            datasets: [
+              {
+                label: "Sales ($)",
+                fill: true,
+                backgroundColor: "transparent",
+                borderColor: window.theme.primary,
+                data: [0.96, 0.97, 1584, 1892, 1487, 2223],
+              },
+              {
+                label: "Orders",
+                fill: true,
+                backgroundColor: "transparent",
+                borderColor: "#adb5bd",
+                borderDash: [4, 4],
+                data: [958, 724, 629, 883, 915, 1214],
+              },
+            ],
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              intersect: false,
+            },
+            hover: {
+              intersect: true,
+            },
+            plugins: {
+              filler: {
+                propagate: false,
+              },
+            },
+            scales: {
+              xAxes: [
+                {
+                  reverse: true,
+                  gridLines: {
+                    color: "rgba(0,0,0,0.05)",
+                  },
+                },
+              ],
+              yAxes: [
+                {
+                  ticks: {
+                    stepSize: 500,
+                  },
+                  display: true,
+                  borderDash: [5, 5],
+                  gridLines: {
+                    color: "rgba(0,0,0,0)",
+                    fontColor: "#fff",
+                  },
+                },
+              ],
+            },
+          },
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Bar chart
+        new Chart(document.getElementById("chartjs-bar-dataset"), {
+          type: "bar",
+          data: {
+            labels: ["Chín", "Hỏng", "Xanh"],
+            datasets: [
+              {
+                label: "Data Train",
+                backgroundColor: window.theme.primary,
+                borderColor: window.theme.primary,
+                hoverBackgroundColor: window.theme.primary,
+                hoverBorderColor: window.theme.primary,
+                data: [54, 67, 41],
+                barPercentage: 0.75,
+                categoryPercentage: 0.5,
+              },
+              {
+                label: "Data validation",
+                backgroundColor: "#dee2e6",
+                borderColor: "#dee2e6",
+                hoverBackgroundColor: "#dee2e6",
+                hoverBorderColor: "#dee2e6",
+                data: [69, 66, 24],
+                barPercentage: 0.75,
+                categoryPercentage: 0.5,
+              },
+            ],
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+            },
+            scales: {
+              yAxes: [
+                {
+                  gridLines: {
+                    display: false,
+                  },
+                  stacked: false,
+                  ticks: {
+                    stepSize: 20,
+                  },
+                },
+              ],
+              xAxes: [
+                {
+                  stacked: false,
+                  gridLines: {
+                    color: "transparent",
+                  },
+                },
+              ],
+            },
+          },
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Doughnut chart
+        new Chart(document.getElementById("chartjs-doughnut"), {
+          type: "doughnut",
+          data: {
+            labels: ["Social", "Search Engines", "Direct", "Other"],
+            datasets: [
+              {
+                data: [260, 125, 54, 146],
+                backgroundColor: [
+                  window.theme.primary,
+                  window.theme.success,
+                  window.theme.warning,
+                  "#dee2e6",
+                ],
+                borderColor: "transparent",
+              },
+            ],
+          },
+          options: {
+            maintainAspectRatio: false,
+            cutoutPercentage: 65,
+            legend: {
+              display: false,
+            },
+          },
+        });
+      });
+    </script>
   </body>
 </html>

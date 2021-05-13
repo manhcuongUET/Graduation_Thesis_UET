@@ -19,9 +19,9 @@
 
     <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
-    <title>Tác giả | Demo</title>
+    <title>Hệ thống phân loại- Demo</title>
 
-    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" media="all" />
   </head>
 
   <body>
@@ -41,7 +41,7 @@
           <ul class="sidebar-nav">
             <li class="sidebar-header"></li>
 
-            <li class="sidebar-item">
+            <li class="sidebar-item active">
               <a class="sidebar-link" href="index.html">
                 <i class="align-middle" data-feather="sliders"></i>
                 <span class="align-middle">Bảng Điều Khiển</span>
@@ -55,13 +55,13 @@
               </a>
             </li>
 
-            <li class="sidebar-item active">
+            <li class="sidebar-item">
               <a class="sidebar-link" href="tac-gia.html">
                 <i class="align-middle" data-feather="user"></i>
                 <span class="align-middle">Tác Giả</span>
               </a>
             </li>
-            <li class="sidebar-item">
+            <li class="sidebar-item ">
               <a class="sidebar-link" href="huong-dan.html">
                 <i class="align-middle" data-feather="list"></i>
                 <span class="align-middle">Hướng Dẫn</span>
@@ -136,20 +136,6 @@
           <a class="sidebar-toggle d-flex">
             <i class="hamburger align-self-center"></i>
           </a>
-
-          <form class="d-none d-sm-inline-block">
-            <div class="input-group input-group-navbar">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Search…"
-                aria-label="Search"
-              />
-              <button class="btn" type="button">
-                <i class="align-middle" data-feather="search"></i>
-              </button>
-            </div>
-          </form>
 
           <div class="navbar-collapse collapse">
             <ul class="navbar-nav navbar-align">
@@ -233,7 +219,6 @@
                   </div>
                 </div>
               </li>
-
               <li class="nav-item dropdown">
                 <a
                   class="nav-icon dropdown-toggle d-inline-block d-sm-none"
@@ -285,104 +270,96 @@
           </div>
         </nav>
 
-        <main class="content">
-          <h1 class="h3 mb-3">Tác giả</h1>
-          <hr />
-          <h2>Hệ thống phân loại hoa quả</h2>
-          <div class="row">
-            <div class="col-md-4 col-xl-4">
-              <div class="card mb-3">
-                <h4 class="card-header">Giảng viên hướng dẫn</h4>
-                <div class="card-body text-center" style="padding-bottom: 58px;">
-                  <img
-                  src="img/photos/avatar-none.jpg"
-                    alt="Pham Tuan"
-                    class="img-fluid mb-2"
-                    width="128"
-                    height="128"
-                  />
-                  <h5 class="card-title mb-0">Th.S Phạm Đình Tuân</h5>
-                  <div class="text-muted mb-2">...</div>
-                </div>
-                <hr class="my-0" />
-                <div class="card-body">
-                  <h5 class="h6 card-title">Thông tin</h5>
-                  /
-                </div>
-                <hr class="my-0" />
-              </div>
+        <main class="content" style="margin-bottom: 50px">
+          <div class="container">
+            <div class="header">
+              <h1 style="height: 15; text-align: center">Hệ Thống Phân Loại</h1>
             </div>
-            <div class="col-md-4 col-xl-4">
-              <div class="card mb-3">
-                <h4 class="card-header">Sinh viên thực hiện</h4>
-                <div class="card-body text-center">
-                  <img
-                    src="img/avatars/20200729_175352.jpg"
-                    alt="Manh Cuong"
-                    class="img-fluid mb-2"
-                    width="128"
-                    height="128"
-                  />
-                  <h5 class="card-title mb-0">Đoàn Mạnh Cường</h5>
-                  <div class="text-muted mb-2">17020154</div>
-                </div>
-                <hr class="my-0" />
-
-                <div class="card-body">
-                  <h5 class="h6 card-title">Thông tin</h5>
-                  <div class="d-flex justify-content-around">
-                    <a href="https://github.com/manhcuonguet" target="_blank">
-                      <i class="align-middle" data-feather="github"></i>
-                    </a>
-                    <a
-                      href="https://www.facebook.com/UET.Manfred/"
-                      target="_blank"
-                    >
-                      <i class="align-middle" data-feather="facebook"></i>
-                    </a>
-                    <a href="#">
-                      <i class="align-middle" data-feather="twitter"></i>
-                    </a>
+            <div>
+              <!-- <table class="container" align="center"> -->
+              <div class="content">
+                <div class="d-flex justify-content-center">
+                  <div style="text-align: center; align-self: center">
+                    <input
+                      style="text-align: center"
+                      type="button"
+                      id="startBtn"
+                      value="OFF"
+                      role="group"
+                      onclick="onStartStop()"
+                      class="btn btn-primary"
+                    />
+                    <div>Tốc độ động cơ:</div>
+                    <input
+                      type="number"
+                      id="pwm"
+                      name="pwm"
+                      min="250"
+                      max="1024"
+                      value="360"
+                      onchange="pwmChange()"
+                    />
+                  </div>
+                  <div>
+                    <!-- <img src="{{ url_for('video_feed') }}"> -->
+                    <img
+                      src="img/photos/image-home.PNG"
+                      width="640px"
+                      height="480px"
+                    />
                   </div>
                 </div>
-                <hr class="my-0" />
               </div>
             </div>
-            <div class="col-md-4 col-xl-4">
-              <div class="card mb-3">
-                <h4 class="card-header">Sinh viên thực hiện</h4>
-                <div class="card-body text-center" style="padding-bottom: 58px;">
-                  <img
-                    src="img/photos/avatar-none.jpg"
-                    alt="dao truyen"
-                    class="img-fluid mb-2"
-                    width="128"
-                    height="128"
-                  />
-                  <h5 class="card-title mb-0">Đào Xuân Truyền</h5>
-                  <div class="text-muted mb-2">17020484</div>
-                </div>
-                <hr class="my-0" />
-                <div class="card-body">
-                  <h5 class="h6 card-title">Thông tin</h5>
-                  /
-                </div>
-                <hr class="my-0" />
-              </div>
-            </div>
+            <script>
+              var mode = "/OFF";
+              function onStartStop() {
+                var btn = document.getElementById("startBtn");
 
-            <div class="col-md-8 col-xl-9">
-              <div class="card">
-                <div class="card-header">
-                  <h5 class="card-title mb-0"></h5>
-                </div>
-                <div class="card-body h-100">
-                  <div class="d-flex align-items-start"></div>
+                if (btn.value == "OFF") {
+                  frm = 0;
+                  btn.value = "RUNNING...";
+                  mode = "/RUN";
+                } else {
+                  btn.value = "OFF";
+                  mode = "/OFF";
+                }
 
-                  <hr />
-                </div>
-              </div>
-            </div>
+                var url = mode;
+                var xhr = new XMLHttpRequest();
+                //xhr.onreadystatechange=ProcessResponse;
+                xhr.open("GET", url, true);
+                xhr.overrideMimeType("text/plain; charset=x-user-defined");
+                xhr.send(null);
+                xhr.onreadystatechange = function () {
+                  if (
+                    xhr.readyState == XMLHttpRequest.DONE &&
+                    xhr.status == 200
+                  ) {
+                  }
+                };
+              }
+
+              function pwmChange() {
+                var pwm = document.getElementById("pwm");
+                var pwmValue = pwm.value;
+
+                url = "/PWM?" + "val=" + pwmValue.toString();
+
+                var xhr = new XMLHttpRequest();
+                //xhr.onreadystatechange=ProcessResponse;
+                xhr.open("GET", url, true);
+                xhr.overrideMimeType("text/plain; charset=x-user-defined");
+                xhr.send(null);
+                xhr.onreadystatechange = function () {
+                  if (
+                    xhr.readyState == XMLHttpRequest.DONE &&
+                    xhr.status == 200
+                  ) {
+                  }
+                };
+              }
+            </script>
           </div>
         </main>
 
@@ -397,7 +374,7 @@
                     >
                   </div>
                   <img
-                    src="../examples/img/photos/log_DHCN.jpg"
+                  src="./img/photos/log_DHCN.jpg"
                     alt="log_DHCN"
                     width="135px"
                     height="120"
@@ -408,7 +385,7 @@
               <div class="col-4 text-center">
                 <div class="list-inline">
                   <div class="">
-                    <a class="text-muted" href="index.html">Bảng Điều Khiển</a>
+                    <a class="text-muted" href="#">Bảng Điều Khiển</a>
                   </div>
                   <div class="list-inline-item">
                     <a class="text-muted" href="gioi-thieu.html">Giới thiệu</a>
@@ -434,5 +411,268 @@
     </div>
 
     <script src="js/app.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var ctx = document
+          .getElementById("chartjs-dashboard-line")
+          .getContext("2d");
+        var gradient = ctx.createLinearGradient(0, 0, 0, 225);
+        gradient.addColorStop(0, "rgba(215, 227, 244, 1)");
+        gradient.addColorStop(1, "rgba(215, 227, 244, 0)");
+        // Line chart
+        new Chart(document.getElementById("chartjs-dashboard-line"), {
+          type: "line",
+          data: {
+            labels: [
+              "Jan",
+              "Feb",
+              "Mar",
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Oct",
+              "Nov",
+              "Dec",
+            ],
+            datasets: [
+              {
+                label: "Sales ($)",
+                fill: true,
+                backgroundColor: gradient,
+                borderColor: window.theme.primary,
+                data: [
+                  2115,
+                  1562,
+                  1584,
+                  1892,
+                  1587,
+                  1923,
+                  2566,
+                  2448,
+                  2805,
+                  3438,
+                  2917,
+                  3327,
+                ],
+              },
+            ],
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              intersect: false,
+            },
+            hover: {
+              intersect: true,
+            },
+            plugins: {
+              filler: {
+                propagate: false,
+              },
+            },
+            scales: {
+              xAxes: [
+                {
+                  reverse: true,
+                  gridLines: {
+                    color: "rgba(0,0,0,0.0)",
+                  },
+                },
+              ],
+              yAxes: [
+                {
+                  ticks: {
+                    stepSize: 1000,
+                  },
+                  display: true,
+                  borderDash: [3, 3],
+                  gridLines: {
+                    color: "rgba(0,0,0,0.0)",
+                  },
+                },
+              ],
+            },
+          },
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Pie chart
+        new Chart(document.getElementById("chartjs-dashboard-pie"), {
+          type: "pie",
+          data: {
+            labels: ["Chrome", "Firefox", "IE"],
+            datasets: [
+              {
+                data: [4306, 3801, 1689],
+                backgroundColor: [
+                  window.theme.primary,
+                  window.theme.warning,
+                  window.theme.danger,
+                ],
+                borderWidth: 5,
+              },
+            ],
+          },
+          options: {
+            responsive: !window.MSInputMethodContext,
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+            },
+            cutoutPercentage: 75,
+          },
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Bar chart
+        new Chart(document.getElementById("chartjs-dashboard-bar"), {
+          type: "bar",
+          data: {
+            labels: [
+              "Jan",
+              "Feb",
+              "Mar",
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Oct",
+              "Nov",
+              "Dec",
+            ],
+            datasets: [
+              {
+                label: "This year",
+                backgroundColor: window.theme.primary,
+                borderColor: window.theme.primary,
+                hoverBackgroundColor: window.theme.primary,
+                hoverBorderColor: window.theme.primary,
+                data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+                barPercentage: 0.75,
+                categoryPercentage: 0.5,
+              },
+            ],
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+            },
+            scales: {
+              yAxes: [
+                {
+                  gridLines: {
+                    display: false,
+                  },
+                  stacked: false,
+                  ticks: {
+                    stepSize: 20,
+                  },
+                },
+              ],
+              xAxes: [
+                {
+                  stacked: false,
+                  gridLines: {
+                    color: "transparent",
+                  },
+                },
+              ],
+            },
+          },
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var markers = [
+          {
+            coords: [31.230391, 121.473701],
+            name: "Shanghai",
+          },
+          {
+            coords: [28.70406, 77.102493],
+            name: "Delhi",
+          },
+          {
+            coords: [6.524379, 3.379206],
+            name: "Lagos",
+          },
+          {
+            coords: [35.689487, 139.691711],
+            name: "Tokyo",
+          },
+          {
+            coords: [23.12911, 113.264381],
+            name: "Guangzhou",
+          },
+          {
+            coords: [40.7127837, -74.0059413],
+            name: "New York",
+          },
+          {
+            coords: [34.052235, -118.243683],
+            name: "Los Angeles",
+          },
+          {
+            coords: [41.878113, -87.629799],
+            name: "Chicago",
+          },
+          {
+            coords: [51.507351, -0.127758],
+            name: "London",
+          },
+          {
+            coords: [40.416775, -3.70379],
+            name: "Madrid ",
+          },
+        ];
+        var map = new JsVectorMap({
+          map: "world",
+          selector: "#world_map",
+          zoomButtons: true,
+          markers: markers,
+          markerStyle: {
+            initial: {
+              r: 9,
+              strokeWidth: 7,
+              stokeOpacity: 0.4,
+              fill: window.theme.primary,
+            },
+            hover: {
+              fill: window.theme.primary,
+              stroke: window.theme.primary,
+            },
+          },
+        });
+        window.addEventListener("resize", () => {
+          map.updateSize();
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("datetimepicker-dashboard").flatpickr({
+          inline: true,
+          prevArrow:
+            '<span class="fas fa-chevron-left" title="Previous month"></span>',
+          nextArrow:
+            '<span class="fas fa-chevron-right" title="Next month"></span>',
+        });
+      });
+    </script>
   </body>
 </html>

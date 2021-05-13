@@ -23,12 +23,6 @@ Hệ thống phân loại ứng dụng xử lý ảnh trên mạng CNN (VGG16)
 * Clone this repo `git clone https://github.com/manhcuongUET/Graduation_Thesis_UET.git`
 * [Download from Website]()
 
-##   Tài nguyên
+##  Lỗi
 
-* [Demo](https://manhcuonguet.github.io/Graduation_Thesis_UET/Website%20Classification%20System/examples/index.html)
-* [Documentation](https://manhcuonguet.github.io/Graduation_Thesis_UET)
-* [Support]()
-
-##  Lỗi và yêu cầu tính năng
-
-Found a bug or have a feature request? [Please open a new issue](https://github.com/manhcuongUET/Graduation_Thesis_UET/issues/new).
+[Please open a new issue](https://github.com/manhcuongUET/Graduation_Thesis_UET/issues/new).
