@@ -7,12 +7,12 @@ Sorting system by Tensorflow
 ## Đào tạo mô hình phân loại trên mạng CNN (VGG-16) 3 lớp
 ## Hệ thống phần cứng
 
-<strong><a href="https://manhcuonguet.github.io/Graduation_Thesis_UET/Website%20Classification%20System/examples/index.html">View Demo</a>
+<strong><a href="https://manhcuonguet.github.io/Graduation_Thesis_UET/Website%20Classification%20System/components/index.html">View Demo</a>
 
 
 ## Status
  
-![License](https://img.shields.io/badge/license-MIT-blue.svg)[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://manhcuonguet.github.io/Graduation_Thesis_UET/Website%20Classification%20System/examples/index.html)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://manhcuonguet.github.io/Graduation_Thesis_UET/Website%20Classification%20System/components/index.html)
 
 ## Tính năng
 * Điều khiển, giám sát băng tải qua website.
