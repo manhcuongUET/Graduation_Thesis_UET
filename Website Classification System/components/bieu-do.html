@@ -397,10 +397,14 @@
                 <div class="card flex-fill w-100">
                   <div class="card-header">
                     <h5 class="card-title">
-                      Training and validation accuracy Line Chart
+                      <strong>
+                        Training and validation accuracy Line Chart
+                      </strong>
                     </h5>
                     <h6 class="card-subtitle text-muted">
-                      A line chart is a way of plotting data points on a line.
+                      Khi sử dụng CNN, hiệu quả sau mỗi lần đào tạo được cải
+                      thiện đáng kể, tổn thất ít hơn và tất cả điều này được thể
+                      hiện dưới dạng đồ thị
                     </h6>
                   </div>
                   <div class="card-body">
@@ -410,31 +414,17 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-lg-6">
-                <div class="card flex-fill w-100">
-                  <div class="card-header">
-                    <h5 class="card-title">
-                      Training and validation accuracy Line Chart
-                    </h5>
-                    <h6 class="card-subtitle text-muted">
-                      A line chart is a way of plotting data points on a line.
-                    </h6>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart">
-                      <canvas id="chartjs-line-loss"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               <div class="col-12 col-lg-6">
                 <div class="card">
                   <div class="card-header">
-                    <h5 class="card-title">Dataset fruit Bar Chart</h5>
+                    <h5 class="card-title">
+                      <strong> Dataset </strong>
+                    </h5>
                     <h6 class="card-subtitle text-muted">
-                      A bar chart provides a way of showing data values
-                      represented as vertical bars.
+                      Dữ liệu được chia thành 3 nhãn phân loại, sau khi được
+                      tăng dữ liệu có gần 3000 ảnh bao gồm: dữ liệu đào tạo và
+                      dữ liệu xác thực.
                     </h6>
                   </div>
                   <div class="card-body">
@@ -448,15 +438,20 @@
               <div class="col-12 col-lg-6">
                 <div class="card">
                   <div class="card-header">
-                    <h5 class="card-title">Doughnut Chart</h5>
+                    <h5 class="card-title">Graph</h5>
                     <h6 class="card-subtitle text-muted">
-                      Doughnut charts are excellent at showing the relational
-                      proportions between data.
+                      Ảnh thực tế camera pi nhận được sẽ là ảnh chứa từng đối
+                      tượng với các nhãn khác nhau.
                     </h6>
                   </div>
                   <div class="card-body">
                     <div class="chart chart-sm">
-                      <canvas id="chartjs-doughnut"></canvas>
+                      <img
+                        src="./img/photos/đồ thi_1.PNG"
+                        alt="do_thi_inference"
+                        width="524px"
+                        height="400px"
+                      />
                     </div>
                   </div>
                 </div>
@@ -523,19 +518,19 @@
             labels: ["", "2", "4", "6", "8", "10"],
             datasets: [
               {
-                label: "Sales ($)",
+                label: "Validation accuracy",
                 fill: true,
                 backgroundColor: "transparent",
                 borderColor: window.theme.primary,
-                data: [0.96, 0.97, 1584, 1892, 1487, 2223],
+                data: [0.65, 0.924, 0.9632, 0.9655, 0.9722, 0.9704],
               },
               {
-                label: "Orders",
+                label: "Training accuracy",
                 fill: true,
                 backgroundColor: "transparent",
                 borderColor: "#adb5bd",
                 borderDash: [4, 4],
-                data: [958, 724, 629, 883, 915, 1214],
+                data: [0.35, 0.79, 0.91, 0.93, 0.95, 0.96],
               },
             ],
           },
@@ -596,7 +591,7 @@
                 borderColor: window.theme.primary,
                 hoverBackgroundColor: window.theme.primary,
                 hoverBorderColor: window.theme.primary,
-                data: [54, 67, 41],
+                data: [840, 960, 404],
                 barPercentage: 0.75,
                 categoryPercentage: 0.5,
               },
@@ -606,7 +601,7 @@
                 borderColor: "#dee2e6",
                 hoverBackgroundColor: "#dee2e6",
                 hoverBorderColor: "#dee2e6",
-                data: [69, 66, 24],
+                data: [138, 316, 144],
                 barPercentage: 0.75,
                 categoryPercentage: 0.5,
               },
@@ -637,36 +632,6 @@
                   },
                 },
               ],
-            },
-          },
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Doughnut chart
-        new Chart(document.getElementById("chartjs-doughnut"), {
-          type: "doughnut",
-          data: {
-            labels: ["Social", "Search Engines", "Direct", "Other"],
-            datasets: [
-              {
-                data: [260, 125, 54, 146],
-                backgroundColor: [
-                  window.theme.primary,
-                  window.theme.success,
-                  window.theme.warning,
-                  "#dee2e6",
-                ],
-                borderColor: "transparent",
-              },
-            ],
-          },
-          options: {
-            maintainAspectRatio: false,
-            cutoutPercentage: 65,
-            legend: {
-              display: false,
             },
           },
         });
